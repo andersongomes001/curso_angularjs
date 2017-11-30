@@ -8,7 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PortifolioComponent } from './components/portifolio/portifolio.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+//import { RoutesModule } from './/routes.module';
 
+import { RoutesModule } from './routes.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ProdutoComponent } from './components/produto/produto.component';
     ProdutoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
