@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortifolioComponent } from './components/portifolio/portifolio.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProdutoComponent } from './components/produto/produto.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AboutComponent } from './components/about/about.component';
     HeaderComponent,
     FooterComponent,
     PortifolioComponent,
-    AboutComponent
+    AboutComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule
