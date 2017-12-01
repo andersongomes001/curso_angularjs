@@ -11,6 +11,8 @@ import { ProdutoComponent } from './components/produto/produto.component';
 //import { RoutesModule } from './/routes.module';
 
 import { RoutesModule } from './routes.module';
+import {InformacaoService} from "./services/informacao.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,9 +25,12 @@ import { RoutesModule } from './routes.module';
   ],
   imports: [
     BrowserModule,
-    RoutesModule
+    RoutesModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    InformacaoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
