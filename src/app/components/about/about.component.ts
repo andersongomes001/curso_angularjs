@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {EquipeService} from "../../services/equipe.service";
 
 @Component({
   selector: 'app-about',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  equipe = null;
+  constructor(public eqp:EquipeService) {
+    this.eqp.getequipe().subscribe(data => {
+      this.equipe = data.results;
+      console.log(data.results);
+    });
+  }
 
   ngOnInit() {
+
   }
 
 }

@@ -13,6 +13,7 @@ import { ProdutoComponent } from './components/produto/produto.component';
 import { RoutesModule } from './routes.module';
 import {InformacaoService} from "./services/informacao.service";
 import {HttpClientModule} from "@angular/common/http";
+import {EquipeService} from "./services/equipe.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule
   ],
   providers: [
-    InformacaoService
+    InformacaoService,
+    EquipeService
   ],
   bootstrap: [AppComponent]
 })
