@@ -14,6 +14,8 @@ import { RoutesModule } from './routes.module';
 import {InformacaoService} from "./services/informacao.service";
 import {HttpClientModule} from "@angular/common/http";
 import {EquipeService} from "./services/equipe.service";
+import { LoadingComponent } from './components/loading/loading.component';
+import {ProdutosService} from "./services/produtos.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {EquipeService} from "./services/equipe.service";
     FooterComponent,
     PortifolioComponent,
     AboutComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {EquipeService} from "./services/equipe.service";
   ],
   providers: [
     InformacaoService,
-    EquipeService
+    EquipeService,
+    ProdutosService
   ],
   bootstrap: [AppComponent]
 })
