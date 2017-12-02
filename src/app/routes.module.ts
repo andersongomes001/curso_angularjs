@@ -6,12 +6,14 @@ import {
   ProdutoComponent,
   AboutComponent
 } from "./components/index.paginas";
+import {SearchComponent} from "./components/search/search.component";
 
 
 const routes: Routes = [
   { path: 'home', component: PortifolioComponent},
   { path: 'about', component: AboutComponent},
   { path: 'produto/:id', component: ProdutoComponent },
+  { path: 'buscar/:id', component: SearchComponent },
   { path: '**', pathMatch:"full", redirectTo: 'home' }
 ];
 

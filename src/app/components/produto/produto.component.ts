@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {ProdutosService} from "../../services/produtos.service";
 
 @Component({
   selector: 'app-produto',
@@ -7,10 +8,27 @@ import {ActivatedRoute} from "@angular/router";
   styles: []
 })
 export class ProdutoComponent implements OnInit {
+  private dados = null;
+  private loadProduct:boolean = true;
 
-  constructor(private actrou: ActivatedRoute) {
+  constructor(
+    private actrou: ActivatedRoute,
+    private prodser: ProdutosService
+    ) {
     this.actrou.params.subscribe(parametros => {
-       console.log(parametros.id);
+
+       this.prodser.getProduto_id(parametros.id).subscribe(data=>{
+         setTimeout(()=>{
+           this.dados = data;
+           this.dados.cod = parametros.id;
+           this.loadProduct = false;
+           console.log(this.dados);
+         }, 3000);
+
+
+       }, erro =>{
+         console.log(erro);
+       });
     });
   }
 

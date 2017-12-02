@@ -10,7 +10,7 @@ export class PortifolioComponent {
   private loadProduct:boolean = true;
   private listaProdutos:any[] = [];
   constructor(private produtos:ProdutosService) {
-    this.produtos.getProduto_id().subscribe( data => {
+    this.produtos.getProdutos().subscribe( data => {
       setTimeout(()=>{
         this.listaProdutos = data;
         this.loadProduct = false;

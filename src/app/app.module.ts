@@ -16,6 +16,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {EquipeService} from "./services/equipe.service";
 import { LoadingComponent } from './components/loading/loading.component';
 import {ProdutosService} from "./services/produtos.service";
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {ProdutosService} from "./services/produtos.service";
     PortifolioComponent,
     AboutComponent,
     ProdutoComponent,
-    LoadingComponent
+    LoadingComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

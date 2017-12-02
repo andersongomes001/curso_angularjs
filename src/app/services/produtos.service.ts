@@ -7,10 +7,10 @@ export class ProdutosService {
 
   constructor(private http: HttpClient) { }
 
-  getProdutos():Observable<any>{
-    return this.http.get("https://paginaangular.firebaseio.com/produtos.json");
+  getProduto_id(id:string = null):Observable<any>{
+    return this.http.get("https://paginaangular.firebaseio.com/produtos/"+id+".json");
   }
-  getProduto_id():Observable<any>{
+  getProdutos():Observable<any>{
     return this.http.get("https://paginaangular.firebaseio.com/produtos_ids.json");
   }
 
