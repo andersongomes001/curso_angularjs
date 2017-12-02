@@ -22,7 +22,6 @@ export class ProdutoComponent implements OnInit {
            this.dados = data;
            this.dados.cod = parametros.id;
            this.loadProduct = false;
-           console.log(this.dados);
          }, 3000);
 
 

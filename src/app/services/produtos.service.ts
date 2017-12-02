@@ -13,5 +13,8 @@ export class ProdutosService {
   getProdutos():Observable<any>{
     return this.http.get("https://paginaangular.firebaseio.com/produtos_ids.json");
   }
+  getSearch(valor:string):Observable<any>{
+    return this.http.get("https://paginaangular.firebaseio.com/produtos_ids.json");
+  }
 
 }
