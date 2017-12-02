@@ -8,7 +8,7 @@ import {EquipeService} from "../../services/equipe.service";
 })
 export class AboutComponent implements OnInit {
   equipe = null;
-  private carregando: boolean = true;
+  carregando: boolean = true;
   constructor(public eqp:EquipeService) {
     this.eqp.getequipe().subscribe(data => {
       setTimeout(() =>{

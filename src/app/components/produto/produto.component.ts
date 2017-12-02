@@ -8,8 +8,8 @@ import {ProdutosService} from "../../services/produtos.service";
   styles: []
 })
 export class ProdutoComponent implements OnInit {
-  private dados = null;
-  private loadProduct:boolean = true;
+  dados = null;
+  loadProduct:boolean = true;
 
   constructor(
     private actrou: ActivatedRoute,

@@ -8,8 +8,8 @@ import {ProdutosService} from "../../services/produtos.service";
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  private listaProdutos:any[] = [];
-  private loadProduct:boolean = true;
+  listaProdutos:any[] = [];
+  loadProduct:boolean = true;
   constructor(private actrout: ActivatedRoute, private ps:ProdutosService) {
     this.actrout.params.subscribe(params => {
       this.search(params.id);

@@ -7,8 +7,8 @@ import {ProdutosService} from "../../services/produtos.service";
   templateUrl: './portifolio.component.html'
 })
 export class PortifolioComponent {
-  private loadProduct:boolean = true;
-  private listaProdutos:any[] = [];
+  loadProduct:boolean = true;
+  listaProdutos:any[] = [];
   constructor(private produtos:ProdutosService) {
     this.produtos.getProdutos().subscribe( data => {
       setTimeout(()=>{
